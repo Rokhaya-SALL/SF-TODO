@@ -17,7 +17,7 @@ class AppFixtures extends Fixture
     {
         $faker = Factory::create('fr_FR');
 
-        // Générer des catégories spécifiques
+        // catégories
         $categories = [];
         foreach (self::CATEGORIES as $categoryName) {
             $category = new Category();
@@ -26,7 +26,7 @@ class AppFixtures extends Fixture
             $categories[] = $category;
         }
 
-        // Générer des articles
+        // articles
         for ($i = 0; $i < self::NB_ARTICLES; $i++) {
             $article = new Article();
             $article

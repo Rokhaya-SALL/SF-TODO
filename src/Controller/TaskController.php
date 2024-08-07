@@ -10,7 +10,7 @@ use DateTime;
 
 class TaskController extends AbstractController
 {
-    #[Route('/', name: 'task_list')]
+    #[Route('/task', name: 'task_list')]
     public function index(): Response
     {
         $tasks = [
