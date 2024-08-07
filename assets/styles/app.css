@@ -1,3 +1,8 @@
-body {
-    background-color: skyblue;
+/* assets/styles/app.css */
+.shadow-pink {
+    box-shadow: 0 10px 20px rgba(255, 182, 193, 0.5), 0 6px 6px rgba(255, 182, 193, 0.5);
+}
+
+.rounded-custom {
+    border-radius: 1.5rem; /* Customize the value as needed */
 }

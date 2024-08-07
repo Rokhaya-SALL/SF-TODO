@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Hello TaskController!
+{% endblock %}
+
+{% block body %}
+  <h1 class="display-1 text-center mb-5">Liste des tâches</h1>
+
+  <div class="d-flex flex-wrap justify-content-center">
+    {% for task in tasks %}
+      <div class="card shadow-pink p-3 mb-4 bg-white rounded-custom" style="width: 20rem; margin: 1rem;">
+        <div class="card-body">
+          <h2 class="card-title h3">{{ task.getName() }}</h2>
+          <h4 class="card-subtitle mb-2 text-muted">{{ task.getCreatedAt()|date('d/m/Y') }}</h4>
+        </div>
+      </div>
+    {% else %}
+      <p class="text-center">Aucune tâche enregistrée</p>
+    {% endfor %}
+  </div>
+{% endblock %}
